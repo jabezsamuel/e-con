@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+  char *a;
+  int length, n;
+  printf("enter the no of elements \n");
+  scanf("%d", &n);
+  a = (char *)malloc(n * sizeof(char));
+  printf("enter the string: ");
+  getchar();
+  gets(a);
+  length = strlen(a);
+  printf("the length of the string is %d\n",length);
+  return 0;
+}
