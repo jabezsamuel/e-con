@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,n1,n2,i;
+    int *ptr;
+    int*a;
+    printf("enter no of elements \n");
+    scanf("%d",&n);
+    a = (int *)malloc(n * sizeof(int));
+    printf("enter the array numbers \n");
+    for(i=0;i<n;i++)
+    {
+        *(ptr+i)=&a;
+        scanf("%d", ptr+i);
+    }
+    
+    printf("enter the number to find a element\n");
+    scanf("%d",&n1);
+    
+    printf("enter the no to replace");
+    scanf("%d",&n2);
+    
+    for(i=0; i<n ; i++)
+    {
+    if(*(ptr+i) == n1)
+    *(ptr+i)=n2;
+    }
+    
+    
+    printf("\n updated Array \n");
+    for(i=0; i<n; i++)
+    {
+    printf("\n %d",*(ptr+i));
+    }
+    return 0;
+    
+}
