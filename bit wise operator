@@ -1,0 +1,20 @@
+
+//longest consicutive 1's using bitwise operator
+#include <stdio.h>
+int main()
+{
+    unsigned int n;
+    int c = 0;
+//getting the inout from user     
+    printf("enter the unsigned number\n");
+    scanf("%d", &n);
+//condition to calculate the longest consecutive of 1's
+    while (n != 0)
+    {
+        n=( n & (n<<1));
+        c++;
+        
+    }
+      printf("number of longest consicutive 1's\n%d\n", c);
+      return 0;
+}
