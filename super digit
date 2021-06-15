@@ -1,0 +1,30 @@
+#include <stdio.h>
+int rSum(int);
+int main()
+{
+    int n, a;
+    printf("\n Enter number: ");
+    scanf("\n%d", &n);
+    a = rSum(n);
+    printf("\n Super Digit = %d", a);
+    return 0;
+}
+
+int rSum(int n)
+{
+    int r, sum = 0;
+    if (n == 0)
+        return 0;
+    else
+    {
+        r = n % 10;
+        sum = r + rSum(n / 10);
+    }
+
+    if (sum > 9)
+    {
+        n = sum;
+        sum = rSum(n);
+    }
+    return sum;
+}
